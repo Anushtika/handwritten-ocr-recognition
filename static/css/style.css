@@ -1,0 +1,56 @@
+/* Custom styles to enhance the Bootstrap theme */
+
+/* Image preview size constraints */
+.max-preview-height {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.max-result-height {
+    max-height: 200px;
+    object-fit: contain;
+}
+
+/* Drop zone styling */
+#dropZone {
+    border: 2px dashed var(--bs-secondary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: var(--bs-dark);
+}
+
+#dropZone:hover, #dropZone.dragover {
+    border-color: var(--bs-primary);
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+/* Progress bar customization */
+.progress {
+    height: 10px;
+    margin-top: -16px;
+    border-radius: 0 0 0.25rem 0.25rem;
+}
+
+/* Text area focus styling */
+#extractedText:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Animation for copy button feedback */
+@keyframes copied {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.copied-animation {
+    animation: copied 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .max-preview-height, .max-result-height {
+        max-height: 200px;
+    }
+}
